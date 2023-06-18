@@ -1,0 +1,71 @@
+/* Task
+Given an array arr of n integers. Write a function to return the sum of all elements in arr.
+
+For example, if n = 5, arr = [7, 2, 8, 4, 9], enter the following values:
+
+5
+7 2 8 4 9
+When the code is compiled and executed, it produces the following result:
+30
+Because 7 + 2 + 8 + 4 + 9 = 30
+
+Theory
+In the previous lessons, you learned how to create and use functions with no return values. Functions with no return value are declared with the keyword void. These functions are used to execute the code in the body of the function and do not need to return the result after the execution is completed.
+
+Functions with return values will return a result after execution.
+
+Example of a function that returns the sum of the numbers from 1 to n:
+
+#include<iostream>
+
+using namespace std;
+
+// Declare function sum with return value of type int and the input is number n
+int sum(int n) {
+	// Variable that stores the sum of numbers from 1 to n
+	int add = 0;
+	// Calculate the sum of numbers from 1 to n and store it in variable add
+	for (int i = 1; i <= n; i++) {
+		add += i;
+	}
+	// Return add (assign value of function sum to add)
+	return add;
+}
+
+int main() {
+	// Display the value of function sum with different inputs on the screen
+	cout << sum(3) << " " << sum(4) << " " << sum(5);
+	return 0;
+}
+When the above code is compiled and executed, it produces the following result:
+6 10 15
+In the above example, function sum() is declared with the keyword int so that the return value is type int (the result of this function is an integer).
+
+To return a result of the function, you use the return statement. As in the example above, function sum() calls return statement add; so the result of the function is variable add.
+
+Because sum() is a function whose return value is an integer, you can use this function as an integer (you can assign int a = sum(3); or output cout << sum(3);, ...).
+*/
+
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+void sum(int a[],int n)
+{
+	int sum1=0;
+	for(int i=0;i<n;i++)
+	{
+       sum1+=a[i];
+	}
+	printf("%d",sum1);
+}
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int a[100];
+	for(int i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	sum(a,n);
+}
