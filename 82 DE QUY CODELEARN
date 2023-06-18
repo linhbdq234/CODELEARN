@@ -1,0 +1,56 @@
+/* Task
+Given an integer n. Write a recursive function that computes and returns the result of n!
+
+For example, if you enter 5 as the value of n, the program produces 120 on the screen.
+Theory
+The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called as recursive function.
+
+This is how a recursive function looks like:
+
+void recurse() {
+    ...
+    recurse();
+    ...
+}
+Because this function calls itself, it always needs a stopping point in order to avoid running forever.
+
+Below is an example of a recursive function that computes 5!:
+
+factorial(5)
+= 5 * factorial(4)
+= 5 * 4 * factorial(3)
+= 5 * 4 * 3 * factorial(2)
+= 5 * 4 * 3 * 2 * factorial(1)
+= 5 * 4 * 3 * 2 * 1
+= 120
+In the above function, the stopping point of function factorial is 1. Therefore, this function returns 1 instead of continuing to call itself.
+
+Look at another example of a recursive function that computes the sum of all numbers from 1 to n:
+
+#include<stdio.h>
+
+int sumOfArray(int n) {
+    if (n == 0) return 0;
+    return n + sumOfArray(n - 1);
+}
+
+int main() {
+    printf("%d", sumOfArray(10));
+    return 0;
+}
+In the above function, the stopping point of function sum is 0. Therefore, this function returns 0 instead of continuing to call
+*/
+
+#include <stdio.h>
+#include <math.h>
+int peterial(int n)
+{
+    if(n==1)  return 1;
+    return n * peterial (n-1);
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    printf("%d",peterial(n));
+}
