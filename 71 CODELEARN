@@ -1,0 +1,27 @@
+/*
+Task
+Write a program that accepts the names of two people from the user then checks whether these two names are the same or not.
+
+If two names are the same, print the following line on the screen:
+
+two people have the same name
+If two names are different, print the following line on the screen:
+
+two people don't have the same name
+*/
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+    char tem[100];
+    char temp[100];
+    scanf("%s%s",tem,temp);
+    if(strcmp(tem,temp)==0)
+    {
+        printf("two people having the same name");
+    }else
+    {
+        printf("two people don't have the same name");
+    }
+    return 0;
+}
