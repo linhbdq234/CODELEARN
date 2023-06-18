@@ -14,7 +14,7 @@ CODELEARN
 int main() {
 	char tem[100];
 	scanf("%s",tem); 
-	for(int i=1;i<strlen(tem);i++)
+	for(int i=0;i<strlen(tem);i++)
 	{
 		if(tem[i]>='a' && tem[i]<='z')
 		{
