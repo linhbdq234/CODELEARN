@@ -1,0 +1,25 @@
+/*Task
+Given a radius r of a circle. Write a function to return the perimeter (chu vi) of that circle knowing that π = 3.14.
+
+For example, if you enter the following value:
+
+3.5
+the screen will display as below:
+
+21.98
+*/
+// chu y : scanf khong duoc %.2lf ma la %lf
+
+#include <stdio.h>
+#include <math.h>
+void perimeter(double n)
+{
+	double perimeter1 =  2 * n * 3.14;
+	printf("%.8lf",perimeter1);
+}
+int main()
+{
+	double n;
+	scanf("%lf",&n);
+	perimeter(n);
+}
