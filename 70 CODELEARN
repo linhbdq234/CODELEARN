@@ -1,0 +1,26 @@
+/*Task
+Given a string s. Write a program that accepts a string s from the user and converts all uppercase letters in s to lowercase letters then prints the converted string on the screen.
+
+If s = "CODELEARN", enter the following line:
+
+CODELEARN
+When the code is compiled and executed, it produces the following result:
+
+codelearn
+*/
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+    char tem[100];
+    scanf("%s", tem);
+    for(int i=0;i<strlen(tem);i++)
+    {
+        if(tem[i]>='A' && tem[i]<='Z')
+        {
+            tem[i]+=32;
+        }
+    }
+    printf("%s",tem);
+    return 0;
+}
