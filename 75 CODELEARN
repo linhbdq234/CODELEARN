@@ -1,0 +1,25 @@
+/*Task
+Given a string variable name, write a function to print the following information on the screen:
+
+Hello {P}
+With {P} is the value of name.
+
+For example, if you enter the following value:
+
+Codelearn
+When the code is compiled and executed, it produces the following result:
+Hello Codelearn
+*/
+#include<stdio.h>
+
+void show(char name[100])
+{
+	printf("Hello %s",name);
+}
+
+int main() {
+	char name[100];
+	scanf("%s", name);
+	show(name);
+	return 0;
+}
