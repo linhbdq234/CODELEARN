@@ -1,0 +1,14 @@
+/*
+Task
+Write a program to print all characters from 'A' to 'Z' as below:
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+*/
+#include<stdio.h>
+
+int main() {
+    for (char c = 'A'; c <= 'Z'; c++) {
+        printf("%c", c);
+    }
+    return 0;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
