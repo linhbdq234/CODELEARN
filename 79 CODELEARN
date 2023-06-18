@@ -1,0 +1,53 @@
+*/ Task
+Given an array arr1 of n1 elements and an array arr2 of n2 elements. Complete the maxOfArray() function so that the program returns the largest number in each given array.
+
+For example, if n1 = 5, arr1 = [1, 2, 3, 4, 5], n2 = 6, arr2 = [4, 2, 2, 6, 13, 1], enter the following :
+
+5
+1 2 3 4 5
+6
+4 2 2 6 13 1
+When the code is compiled and executed, it produces the following result:
+
+5 13
+Because 5 is the largest number in arr1 and 13 is the largest number in arr2
+*/
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+void max(int a[],int n)
+{
+	for(int i=0;i<n;i++)
+	{
+		for(int j=i+1;j<n;j++)
+		{
+			if(a[j]>a[i])
+			{
+				int temp= a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+		}
+	}
+}
+int main()
+{
+	int m,n;
+	scanf("%d",&m);
+	int a[100],b[100];
+	for(int i=0;i<m;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	scanf("%d",&n);
+	for(int i=0;i<n;i++)
+	{
+		scanf("%d",&b[i]);
+	}
+	max(a,m);
+
+	printf("%d ",a[0]);
+
+max(b,n);
+printf("%d",b[0]);
+}
